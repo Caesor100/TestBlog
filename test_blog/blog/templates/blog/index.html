@@ -1,0 +1,13 @@
+{% extends 'blog/main.html' %}
+{% block main_section %}
+    {% for post in news %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text }}</p>
+        <span class="text-muted">Publication: {{ post.date|date:"j F Y "}} MSK {{ post.date|date:"H:i "}}</span>
+        {% if post.author %}
+            <p>Author: {{ post.author }}</p>
+        {% else %}
+            <p>Author: admin</p>
+        {% endif %}
+    {% endfor%}
+{% endblock main_section %}

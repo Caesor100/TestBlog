@@ -1,0 +1,14 @@
+{% extends 'blog/main.html' %}
+{% block main_section %}
+    <h2>Registration</h2>
+    <div class="form-section">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <br><br>
+            <button type="submit">Register</button>
+        </form>
+        <hr>
+        Already registered? <a href="">login to account</a>
+    </div>
+{% endblock main_section %}

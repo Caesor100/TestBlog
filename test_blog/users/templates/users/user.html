@@ -1,0 +1,13 @@
+{% extends 'blog/main.html' %}
+{% block main_section %}
+    <h2>Authorization</h2>
+    <div class="form-section">
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <br><br>
+            <button type="submit">log in</button>
+        </form>
+        <hr>
+    </div>
+{% endblock main_section %}
